@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<RootNamespace>OP2MapJsonTools</RootNamespace>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<BaseOutputPath>D:\opu\build\</BaseOutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<AssemblyTitle>OP2MapJsonToolsLibrary</AssemblyTitle>
+		<Description>Outpost 2 map json tools class library for converting between formats.</Description>
+		<Company>Outpost Universe</Company>
+		<Product>OP2MapJsonTools</Product>
+		<Version>0.2.5.6</Version>
+		<Authors>Outpost Universe</Authors>
+		<Copyright>Outpost Universe</Copyright>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <OutputPath>D:\opu\build</OutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <OutputPath>D:\opu\build</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="BlankMaps\blankmaps.zip" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="BlankMaps\blankmaps.zip" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="OP2UtilityDotNet">
+	    <HintPath>..\..\build\OP2UtilityDotNet.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>
